@@ -6,8 +6,15 @@ token AT '@'
 token LP '\('
 token RP '\)'
 %
+
 # Syntactic specification
 #
 # Here is a sketch of the first rule. Replace ... with something and
 # add more rules below it.
-<balanced> ::= ... AT
+<balanced> ::= <balencedparen> AT
+
+<balancedparen>:Paren ::= LP <balancedparen> RP
+<balencedparen>:None ::= 
+
+
+%

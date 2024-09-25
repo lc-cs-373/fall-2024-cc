@@ -1,15 +1,9 @@
 skip WS '\s+'
-token POUND '#\w+\s+'
+skip COMMENT '#.*'
 token PERIOD '\.'
-token ID '\w+\d+'
 token THIS 'this'
 token THAT 'that'
 token THE 'the'
 token OTHER 'other'
 token THING 'thing'
-%
-<sentence> ::= <words> WS
-<words>:ListSome ::= WORD <words>
-<words>:ListNone ::=
-<skip> ::= POUND <sentence>
-
+token ID '[A-Za-z0-9_]+'

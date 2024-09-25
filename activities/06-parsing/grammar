@@ -1,0 +1,37 @@
+skip WS '\s+'
+token NUM '\d+'
+token LEFTBRACKET '\['
+token RIGHTBRACKET '\]'
+token COMMA ','
+
+%
+
+<lon> ::= LEFTBRACKET <nums> RIGHTBRACKET
+<nums> **= <NUM>
+
+#<nums>:NumsNode ::= <NUM> <nums>
+#<nums>:NumsNull ::= 
+
+%
+
+Lon
+%%%
+public void $run(){
+    System.out.println(this.nums.toString());
+}
+%%%
+
+Nums
+%%%
+public String toString() {
+    return numList.toString();
+/*
+    String s = "";
+    for (Token t: this.numList) {
+        s += t.toString() + " ";
+    }
+    return s;
+    */
+}
+%%%
+
