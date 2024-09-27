@@ -2,26 +2,26 @@
 //Balanced:import//
 import java.util.*;
 
-// <balanced> ::= <balencedparen> AT
+// <balanced> ::= <bal_paren> AT
 public class Balanced extends _Start /*Balanced:class*/ {
 
     public static final String $className = "Balanced";
     public static final String $ruleString =
-        "<balanced> ::= <balencedparen> AT";
+        "<balanced> ::= <bal_paren> AT";
 
-    public Balencedparen balencedparen;
+    public Bal_paren bal_paren;
 
-    public Balanced(Balencedparen balencedparen) {
+    public Balanced(Bal_paren bal_paren) {
 //Balanced:init//
-        this.balencedparen = balencedparen;
+        this.bal_paren = bal_paren;
     }
 
     public static Balanced parse(Scan scn$, Trace trace$) {
         if (trace$ != null)
             trace$ = trace$.nonterm("<balanced>", scn$.lno);
-        Balencedparen balencedparen = Balencedparen.parse(scn$, trace$);
+        Bal_paren bal_paren = Bal_paren.parse(scn$, trace$);
         scn$.match(Token.Match.AT, trace$);
-        return new Balanced(balencedparen);
+        return new Balanced(bal_paren);
     }
 
 //Balanced//

@@ -1,0 +1,15 @@
+# Q7 - Parentheses balancing
+
+# Lexical specification
+skip WS '\s+'
+token AT '@'
+token LP '\('
+token RP '\)'
+%
+# Syntactic specification
+<balanced> ::= <bal_paren> AT
+<bal_paren>:Yes ::= LP <bal_paren>inner RP <bal_paren>outer
+<bal_paren>:Empty ::= 
+
+
+%

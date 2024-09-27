@@ -1,15 +1,15 @@
 #Balanced:top#
 #Balanced:import#
 
-# <balanced> ::= <balencedparen> AT
+# <balanced> ::= <bal_paren> AT
 class Balanced(_Start): #Balanced:class#
 
     className = "Balanced"
-    ruleString = "<balanced> ::= <balencedparen> AT"
-    balencedparen = None
+    ruleString = "<balanced> ::= <bal_paren> AT"
+    bal_paren = None
 
-    def __init__(balencedparen):
+    def __init__(bal_paren):
         #Balanced:init#
-        self.balencedparen = balencedparen
+        self.bal_paren = bal_paren
 
 #Balanced#
