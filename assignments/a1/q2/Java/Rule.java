@@ -2,27 +2,27 @@
 //Rule:import//
 import java.util.*;
 
-// <rule> ::= SINGLEQUOTE <item> SINGLEQUOTE
+// <rule> ::= QUOTE <input> QUOTE
 public class Rule /*Rule:class*/ {
 
     public static final String $className = "Rule";
     public static final String $ruleString =
-        "<rule> ::= SINGLEQUOTE <item> SINGLEQUOTE";
+        "<rule> ::= QUOTE <input> QUOTE";
 
-    public Item item;
+    public Input input;
 
-    public Rule(Item item) {
+    public Rule(Input input) {
 //Rule:init//
-        this.item = item;
+        this.input = input;
     }
 
     public static Rule parse(Scan scn$, Trace trace$) {
         if (trace$ != null)
             trace$ = trace$.nonterm("<rule>", scn$.lno);
-        scn$.match(Token.Match.SINGLEQUOTE, trace$);
-        Item item = Item.parse(scn$, trace$);
-        scn$.match(Token.Match.SINGLEQUOTE, trace$);
-        return new Rule(item);
+        scn$.match(Token.Match.QUOTE, trace$);
+        Input input = Input.parse(scn$, trace$);
+        scn$.match(Token.Match.QUOTE, trace$);
+        return new Rule(input);
     }
 
 //Rule//

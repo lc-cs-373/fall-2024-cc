@@ -1,15 +1,15 @@
 #Rule:top#
 #Rule:import#
 
-# <rule> ::= SINGLEQUOTE <item> SINGLEQUOTE
+# <rule> ::= QUOTE <input> QUOTE
 class Rule(): #Rule:class#
 
     className = "Rule"
-    ruleString = "<rule> ::= SINGLEQUOTE <item> SINGLEQUOTE"
-    item = None
+    ruleString = "<rule> ::= QUOTE <input> QUOTE"
+    input = None
 
-    def __init__(item):
+    def __init__(input):
         #Rule:init#
-        self.item = item
+        self.input = input
 
 #Rule#

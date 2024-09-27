@@ -18,7 +18,7 @@ public class Token {
 
     public enum Match {
         WS ("\\s+", TokType.SKIP),
-        POUND ("#.*", TokType.SKIP),
+        COMMENT ("#.*", TokType.SKIP),
         PERIOD ("\\."),
         THIS ("this"),
         THAT ("that"),
@@ -26,6 +26,7 @@ public class Token {
         OTHER ("other"),
         THING ("thing"),
         ID ("[A-Za-z0-9_]+"),
+        ERROR ("."),
         $ERROR (null),
         $EOF (null),
         $LINE (null);

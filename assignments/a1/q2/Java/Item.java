@@ -2,23 +2,25 @@
 //Item:import//
 import java.util.*;
 
-public abstract class Item /*Item:class*/ {
+// <input>:Item ::= ITEM
+public class Item extends Input /*Item:class*/ {
 
     public static final String $className = "Item";
+    public static final String $ruleString =
+        "<input>:Item ::= ITEM";
+
+
+
+    public Item() {
+//Item:init//
+
+    }
+
     public static Item parse(Scan scn$, Trace trace$) {
-        Token t$ = scn$.cur();
-        Token.Match match$ = t$.match;
-        switch(match$) {
-        case SPEC:
-            return Input.parse(scn$,trace$);
-        case SINGLEQUOTE:
-            return Null.parse(scn$,trace$);
-        default:
-            throw new PLCCException(
-                "Parse error",
-                "Item cannot begin with " + t$.errString()
-            );
-        }
+        if (trace$ != null)
+            trace$ = trace$.nonterm("<input>:Item", scn$.lno);
+        scn$.match(Token.Match.ITEM, trace$);
+        return new Item();
     }
 
 //Item//

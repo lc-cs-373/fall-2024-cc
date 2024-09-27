@@ -1,0 +1,21 @@
+skip WS '\s+'
+token COMMENT '#[^\n]*' 
+    #[^\n] = looking for anything BUT \n
+token TOKEN 'token'
+token SKIP 'skip'
+token TITLE '[A-Z]+'
+token QUOTE '''
+token ITEM '[A-Za-z0-9_]+' 
+token ERROR '.'
+
+%
+<scanin> ::= <type> TITLE <rule>
+
+<type>:Tokenin ::= TOKEN
+<type>:Skip ::= SKIP
+<type>:Pound ::= COMMENT
+
+<rule> ::= QUOTE <input> QUOTE
+<input>:Item ::= ITEM
+<input>:Null ::= 
+%

@@ -2,12 +2,12 @@
 //Null:import//
 import java.util.*;
 
-// <item>:Null ::= 
-public class Null extends Item /*Null:class*/ {
+// <input>:Null ::= 
+public class Null extends Input /*Null:class*/ {
 
     public static final String $className = "Null";
     public static final String $ruleString =
-        "<item>:Null ::= ";
+        "<input>:Null ::= ";
 
 
 
@@ -18,7 +18,7 @@ public class Null extends Item /*Null:class*/ {
 
     public static Null parse(Scan scn$, Trace trace$) {
         if (trace$ != null)
-            trace$ = trace$.nonterm("<item>:Null", scn$.lno);
+            trace$ = trace$.nonterm("<input>:Null", scn$.lno);
         return new Null();
     }
 

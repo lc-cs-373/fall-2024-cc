@@ -1,11 +1,11 @@
 #Null:top#
 #Null:import#
 
-# <item>:Null ::= 
-class Null(Item): #Null:class#
+# <input>:Null ::= 
+class Null(Input): #Null:class#
 
     className = "Null"
-    ruleString = "<item>:Null ::= "
+    ruleString = "<input>:Null ::= "
 
 
     def __init__():

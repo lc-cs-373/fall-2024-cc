@@ -1,7 +1,7 @@
 public abstract class _Start {
 
     public static _Start parse(Scan scn, Trace trace) {
-        return Tokenscan.parse(scn, trace);
+        return Scanin.parse(scn, trace);
     }
 
     public void $run() {

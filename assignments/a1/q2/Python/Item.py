@@ -1,8 +1,15 @@
 #Item:top#
 #Item:import#
 
-class Item(): #Item:class#
+# <input>:Item ::= ITEM
+class Item(Input): #Item:class#
 
     className = "Item"
+    ruleString = "<input>:Item ::= ITEM"
 
-    #Item#
+
+    def __init__():
+        #Item:init#
+
+
+#Item#
