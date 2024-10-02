@@ -1,4 +1,4 @@
-# Q6 - Parentheses balancing
+# Q7 - Parentheses balancing
 
 # Lexical specification
 skip WS '\s+'
@@ -7,7 +7,9 @@ token LP '\('
 token RP '\)'
 %
 # Syntactic specification
-#
-# Here is a sketch of the first rule. Replace ... with something and
-# add more rules below it.
-<balanced> ::= ... AT
+<balanced> ::= <bal_paren> AT
+<bal_paren>:Yes ::= LP <bal_paren>inner RP <bal_paren>outer
+<bal_paren>:Empty ::= 
+
+
+%
