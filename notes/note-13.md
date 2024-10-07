@@ -61,7 +61,7 @@ let
 in
     let
         p = 42
-        p = p
+        x = p
     in
         x
 ```
