@@ -35,6 +35,7 @@ A *class* adds
 
 ### Clu (1975)
 
+```clu
 complex_number = cluster is
     add, subtract, multiply, ...
     rep = record [
@@ -45,9 +46,13 @@ complex_number = cluster is
     multiply = proc ... end multiply;
     ...
 end complex_number;
+```
+
+<br/><br/>
 
 ### Modula-2 (1977)
 
+```modula2
 DEFINITION MODULE ComplexNumber;
 
 TYPE ComplexNumber = RECORD
@@ -57,9 +62,11 @@ TYPE ComplexNumber = RECORD
 
 PROCEDURE add(a : ComplexNumber; b ComplexNumber) : ComplexNumber;
 ...
+```
 
 ### Simula (1960s)
 
+```simula
 Begin
     Class ComplexNumber;
         Real realPart;
@@ -72,3 +79,4 @@ Begin
         End;
     End;
 End;
+```
